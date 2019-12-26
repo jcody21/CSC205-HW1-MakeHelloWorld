@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0053)http://azfoo.net/gdt/csc205/assignments/02019/hw.html -->
+<html class="gr__azfoo_net"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>CSC205AA::Assignment::#MakeHelloWorld</title>
+
+<meta name="description" content="The &#39;hello, world&#39; assignment.">
+<meta name="keywords" content="hello world, program">
+
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="owner" content="gthurman@gmail.com">
+
+<link rel="stylesheet" type="text/css" href="./CSC205AA__Assignment__#MakeHelloWorld_files/tui.css">
+
+</head><body data-gr-c-s-loaded="true">
+
+<table border="3" cellpadding="5" cellspacing="0" align="center">
+<tbody><tr>
+<td>Assignment: <strong>#MakeHelloWorld</strong></td>
+<td>Due: <b>01/27/02019</b></td>
+<td>Points: <b>3</b></td> 
+</tr></tbody></table>
+
+<h3>Specification</h3>
+<blockquote>
+<p>
+Write <small>(i.e. implement/define/code)</small> 
+a <i>public class MakeHelloWorld</i> that when compiled 
+and executed prints the code for a <i>public class HelloWorld</i> 
+to the standard output stream. The generated <i>public class HelloWorld</i>, 
+when compiled and executed, prints to the standard output stream: 
+<b>"hello, world" from YOUR_FULL_NAME</b> followed by a newline.
+</p>
+<p>
+Example using the command-line for CSC205AA student Dusty Rhodes.
+</p>
+<pre>   command-prompt:  edit MakeHelloWorld.java 
+   command-prompt:  javac MakeHelloWorld.java
+   command-prompt:  java MakeHelloWorld &gt;HelloWorld.java   
+   command-prompt:  javac HelloWorld.java
+   command-prompt:  java HelloWorld
+   "hello, world" from Dusty Rhodes
+</pre>
+<p>
+The generated <i>public class HelloWorld</i> file must contain a file
+comment block that contains the following.
+</p>
+<pre>   This Java application prints the phrase "hello, world"
+   followed by programmer name followed by a newline to 
+   the standard output stream.
+
+   @creator YOUR_FULL_NAME_GOES_HERE
+   @generated YYYYY.MM.DD_FORMATTED_DATE_GOES_HERE
+</pre>
+<h5>Important Notes</h5>
+<ol>
+<li>
+<p>
+The YYYYY.MM.DD formatted date in the generated 
+<i>public class HelloWorld</i> can be initialized 
+using <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Calendar.html" target="_new">java.util.Calendar</a>.  The year and single digit 
+months &amp; days must be prefixed with a zero.
+{<a href="http://azfoo.net/gdt/java/code/2017/Cal.java">Cal.java</a> demonstrates
+the use of Java's <i>class Calendar</i>} 
+</p>
+</li>
+<li>
+<p>
+The generated <i>public class HelloWorld</i> cannot use
+<i>System.out.println()</i> when printing to the standard 
+output stream.  
+</p>
+</li>
+<li>
+<p>
+The phrase "hello, world" must be in double quotes 
+and the letters must be lowercase.
+</p>
+</li>
+</ol>
+<h5>Example Output</h5>
+<p>
+Edith Foogooman is a CSC205AA student.  Edith's program
+was executed on 27 January 2019 and her program's output
+looked like the following.
+</p>
+<pre>   /*
+    * This Java application prints the phrase "hello, world"
+    * followed by programmer name followed by a newline to 
+    * the standard output stream.
+    *
+    * @creator Edith Foogooman
+    * @generated 02019.01.27
+    */
+
+   public class HelloWorld 
+   {
+      public static void main(String[] argv) 
+      {
+         System.out.println("Edith says hello...");
+      }
+   }
+</pre>
+<p>
+Edith's file comment block was correct, but her generated 
+<i>public class HelloWorld</i> did not print the correct 
+output when it was compiled and executed. In addition, 
+Edith called <i>System.out.println()</i> to print to
+the standard output stream.
+</p>
+<pre>   Edith's output:  Edith says hello...
+        should be:  "hello, world" from Edith Foogooman
+</pre>
+</blockquote>
+
+
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
